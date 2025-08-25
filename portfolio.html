@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>פורטפוליו — אסתר (Ester) הול</title>
+  <meta name="description" content="עמוד פורטפוליו רספונסיבי ל-GitHub Pages: פרויקטים, ניסיון, מיומנויות ויצירת קשר." />
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --bg:#0b0d12; --surface:#11141b; --text:#e7e9f5; --muted:#9aa3b2; --brand:#4f46e5; --accent:#06b6d4; --border:#1f2432; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35); --maxw:1100px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f8fc; --surface:#ffffff; --text:#0f1324; --muted:#5e667a; --brand:#4338ca; --accent:#0891b2; --border:#e7e9f3; --shadow:0 10px 30px rgba(10,12,32,.08); }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(79,70,229,.2), transparent 60%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Noto Sans","Helvetica Neue",Arial;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+
+    /* header */
+    header{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.1) blur(8px);background:color-mix(in oklab,var(--bg) 85%,transparent);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:12px 24px}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .nav a{margin-inline:8px;padding:8px 10px;border-radius:10px}
+    .btn{display:inline-block;border:1px solid var(--border);background:var(--surface);padding:10px 14px;border-radius:12px;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px);transition:.2s}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border:none}
+
+    /* hero */
+    .hero{padding:56px 0 36px}
+    .hero-card{display:grid;grid-template-columns:1fr;gap:20px;background:linear-gradient(180deg,color-mix(in oklab,var(--surface) 96%,transparent),var(--surface));border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.15}
+    .hero p{margin:0;color:var(--muted);font-size:1.05rem}
+    .hero-cta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+
+    /* sections */
+    section{margin:40px 0}
+    .section-title{font-size:clamp(22px,3vw,28px);margin:0 0 16px}
+
+    /* chips */
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:8px 12px;border:1px dashed var(--border);border-radius:999px;background:color-mix(in oklab,var(--surface) 92%,transparent);font-size:.95rem;color:var(--muted)}
+
+    /* cards & grid */
+    .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:18px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:grid;gap:10px}
+    .card h3{margin:0;font-size:1.18rem}
+    .card p{margin:0;color:var(--muted)}
+    .card .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{font-size:.85rem;background:color-mix(in oklab,var(--brand) 15%,var(--surface));color:color-mix(in oklab,white 92%,var(--text));padding:4px 8px;border-radius:999px;border:1px solid var(--border)}
+    .card .actions{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+
+    /* timeline */
+    .timeline{display:grid;gap:14px}
+    .item{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:16px}
+    .item h4{margin:0;font-size:1.06rem}
+    .item .meta{color:var(--muted);font-size:.95rem}
+
+    /* contact */
+    .contact{display:grid;gap:10px}
+    .contact .row{display:flex;gap:10px;flex-wrap:wrap}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted)}
+
+    @media (min-width: 780px){
+      .hero-card{grid-template-columns:1.2fr .8fr;align-items:center}
+      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (min-width: 1100px){
+      .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="סרגל עליון">
+      <div class="brand">אסתר (Ester) הול — מפתחת פולסטאק</div>
+      <div>
+        <a href="#projects">פרויקטים</a>
+        <a href="#skills">טכנולוגיות</a>
+        <a href="#experience">ניסיון</a>
+        <a href="#education">השכלה</a>
+        <a href="#contact" class="btn">צור קשר</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-card">
+        <div>
+          <h1 id="hero-title">מפתחת פולסטאק — React, Node.js, .NET</h1>
+          <p>
+            מפתחת בעלת חשיבה אנליטית ויכולת אוטודידקטית, מנוסה בפיתוח E2E איכותי — עצמאית ובצוות. מחפשת תפקיד מאתגר שבו אוכל לצמוח ולתרום.
+          </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="https://github.com/estihool" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="#contact">יצירת קשר</a>
+            <a class="btn" href="#projects">לפרויקטים ↓</a>
+          </div>
+        </div>
+        <div>
+          <div class="card" role="img" aria-label="Stack עיקרי">
+            <strong>Stack עיקרי</strong>
+            <div class="skills">
+              <span class="chip">React</span>
+              <span class="chip">Angular</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Node.js (Express)</span>
+              <span class="chip">C# / .NET Core</span>
+              <span class="chip">Java (OOP)</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL Server</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">REST API</span>
+              <span class="chip">Design Patterns</span>
+              <span class="chip">Microservices</span>
+              <span class="chip">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">פרויקטים נבחרים</h2>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <h3>אתר מתכונים — .NET Core + React</h3>
+          <p>בניית אתר מתכונים במבנה פולסטאק, שימוש נרחב ב‑Bootstrap ל־UI רספונסיבי.</p>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">.NET Core</span>
+            <span class="tag">React</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/estihool" target="_blank" rel="noopener">קוד</a>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <h3>פלטפורמת קורסים אונליין — Angular + EF Core</h3>
+          <p>מערכת קורסים מקוונת עם צד שרת ב‑C# ו‑Entity Framework Core, התממשקות ל‑SQL Server.</p>
+          <div class="tags">
+            <span class="tag">Angular</span>
+            <span class="tag">C#</span>
+            <span class="tag">Entity Framework Core</span>
+            <span class="tag">SQL Server</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/estihool" target="_blank" rel="noopener">קוד</a>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <h3>מערכת שיבוצים לחברת הפלגות — C# + EF + SQL</h3>
+          <p>מערכת ניהול ושיבוץ משמרות נקייה ומודולרית תוך דגש על Clean Code.</p>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">Entity Framework</span>
+            <span class="tag">SQL Server</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/estihool" target="_blank" rel="noopener">קוד</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="exp-title">
+      <h2 class="section-title" id="exp-title">ניסיון מקצועי</h2>
+      <div class="timeline">
+        <div class="item">
+          <h4>Full‑Stack Developer — Musilicicus</h4>
+          <div class="meta">2025 — היום</div>
+          <ul>
+            <li>פיתוח פלטפורמות וכלים ללמידת מוזיקה, כולל אפליקציה נגישה.</li>
+            <li>עיצוב UI חכם ונוח ב‑React, עם ספריות עיצוב ייעודיות.</li>
+            <li>מימוש לוגיקה שרתית מורכבת ב‑Node.js וחיבור דרך Web API.</li>
+            <li>שאילתות MongoDB ל‑CRUD ועוד.</li>
+            <li>ניהול הרשאות משתמשים, הרשמה, גרסאות ועדכוני מערכת.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills (expanded) -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">מיומנויות</h2>
+      <div class="skills">
+        <span class="chip">Frontend: Angular, React, TS, JS, HTML5, CSS3</span>
+        <span class="chip">Backend: C# .NET Core, Java (OOP), Python, Node.js (Express)</span>
+        <span class="chip">Databases: SQL Server, MongoDB</span>
+        <span class="chip">Tools: Git, REST API, Design Patterns, Microservices</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" aria-labelledby="edu-title">
+      <h2 class="section-title" id="edu-title">השכלה</h2>
+      <div class="timeline">
+        <div class="item">
+          <h4>הנדסת תוכנה (תעודת מה"ט — בתהליך), סיום בהצטיינות</h4>
+          <div class="meta">2022 — 2024</div>
+          <p>תכנית UltraCode — KamaTech: אלגוריתמים, מבני נתונים, מערכות הפעלה ועוד. קורסים מתקדמים: רשתות מחשבים, מערכות הפעלה, ניתוח מערכות מידע.</p>
+        </div>
+        <div class="item">
+          <h4>השכלה תיכונית</h4>
+          <div class="meta">2018 — 2021</div>
+          <p>ממוצע מרבי בבחינות הגמר.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">צור קשר</h2>
+      <div class="card">
+        <p>
+          אימייל: <a href="mailto:estihool3767@gmail.com">estihool3767@gmail.com</a><br>
+          טלפון: <a href="tel:+972533103767">053-310-3767</a><br>
+          GitHub: <a href="https://github.com/estihool" target="_blank" rel="noopener">github.com/estihool</a>
+        </p>
+        <form name="contact" netlify>
+          <div class="row">
+            <input name="name" placeholder="שם מלא" required>
+            <input name="email" type="email" placeholder="אימייל" required>
+          </div>
+          <textarea name="message" placeholder="הודעה" required></textarea>
+          <button class="btn btn-primary" type="submit">שליחה</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> אסתר הול — כל הזכויות שמורות
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
