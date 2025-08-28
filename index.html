@@ -1129,23 +1129,15 @@
     </script>
     <script>
 function sendEmail() {
-    emailjs.send("service_1dtsupu", "template_o4rey5d", {
-        to_email: "estihool3767@gmail.com",
-        subject: "Hello Ester",
-        message: "Hi Ester, ... כאן ההודעה"
-    })
-    .then(function(response) {
-       console.log("SUCCESS!", response.status, response.text);
-       alert("המייל נשלח בהצלחה!");
-    }, function(error) {
-       console.log("FAILED...", error);
-       alert("שגיאה בשליחת המייל");
-    });
+    
+   contactForm();
+   
 }
 </script>
 
 </body>
 </html>
+
 
 
 
