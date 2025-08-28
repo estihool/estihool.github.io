@@ -1129,14 +1129,19 @@
     </script>
     <script>
 function sendEmail() {
-    
-   contactForm();
-   
+  const contactForm = document.getElementById('contact-form');
+  if(contactForm){
+      emailjs.sendForm('service_1dtsupu', 'template_o4rey5d', contactForm)
+        .then(() => alert('Message sent successfully!'))
+        .catch(() => alert('Failed to send message.'));
+  }
 }
+
 </script>
 
 </body>
 </html>
+
 
 
 
